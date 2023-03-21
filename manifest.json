@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "d",
+    "version": "0.1",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.youtube.com/*"
+            ],
+            "js": ["lib/rita.js", "content.js"]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": {
+            "16": "images/abstract_nietzsche.png",
+            "24": "images/abstract_nietzsche.png",
+            "32": "images/abstract_nietzsche.png"
+        },
+        "default_title": "Yo",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "webNavigation",
+        "tabs",
+        "storage"
+    ]
+}
